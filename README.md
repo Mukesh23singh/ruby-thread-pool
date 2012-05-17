@@ -5,10 +5,10 @@
     urls = ["http://google.com", "http://juergenbickert.de", "http://github.com"]
     urls.peach {|url| open(url).read }
 
-it retrieves all data from sites in parallel
+All urls are retrieved in parallel. There is no limit on the amount of threads run in parallel.
 
 ## Limited Thread Pool Size
 
     20.times.to_a.peach(10) { sleep(0.1) }
 
-finishes in 0.2 seconds
+It limits the thread pool size to 10 threads. So at any point in time there are at max running 10 threads, and it finishes in 0.2 seconds.
