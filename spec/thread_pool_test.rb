@@ -1,5 +1,5 @@
 require "minitest/autorun"
-require_relative "thread_pool"
+require_relative "../lib/thread_pool"
 
 describe "ThreadPool" do
   it "should run at max so many threads" do
