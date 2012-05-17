@@ -2,8 +2,16 @@ require "minitest/autorun"
 require_relative "../lib/thread_pool"
 
 describe "ThreadPool" do
+  it "should wait for threads to finish" do
+    start = Time.now
+    10.times.to_a.peach { sleep 0.1 }
+    stop = Time.now
+    time = stop - start
+    time.must_be :>=, 0.1
+    time.must_be :<=, 0.2
+  end
+
   it "should run at max so many threads" do
-    require "peach"
     start = Time.now
     20.times.to_a.peach(10) { sleep(0.1) }
     stop = Time.now

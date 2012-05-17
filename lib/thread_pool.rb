@@ -46,7 +46,9 @@ end
 class Array
   def peach(size=nil, type=ThreadPool, &block)
     if size == nil
-      each { |*args| Thread.new(*args, &block) }
+      threads = []
+      each { |*args| threads << Thread.new(*args, &block) }
+      threads.each {|t| t.join }
     else
       pool = type.new(size)
       each { |*args| pool.new(*args, &block) }
