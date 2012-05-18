@@ -54,5 +54,6 @@ class Array
       each { |*args| pool.new(*args, &block) }
       pool.join
     end
+    nil
   end
 end
