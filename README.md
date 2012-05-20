@@ -1,4 +1,5 @@
 # Ruby Thread Pool
+[![Build Status](https://secure.travis-ci.org/simpleprogrammer/ruby-thread-pool.png)](http://travis-ci.org/simpleprogrammer/ruby-thread-pool)
 
 ## Install
 
