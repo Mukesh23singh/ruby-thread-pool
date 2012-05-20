@@ -1,6 +1,11 @@
 # Ruby Thread Pool
 
+## Install
+
+    gem install ruby_thread_pool
+
 ## All In Parallel
+
     require "thread_pool"
     require "open-uri"
     urls = ["http://google.com", "http://juergenbickert.de", "http://github.com"]
@@ -9,6 +14,7 @@
 All urls are retrieved in parallel. There is no limit on the amount of threads run in parallel.
 
 ## Limited Thread Pool Size
+
     require "thread_pool"
     20.times.to_a.peach(10) { sleep(0.1) }
 
