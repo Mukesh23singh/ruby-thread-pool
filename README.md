@@ -2,7 +2,7 @@
 [![Build Status](https://secure.travis-ci.org/simpleprogrammer/ruby-thread-pool.png)](http://travis-ci.org/simpleprogrammer/ruby-thread-pool)
 
 ## Install
-```ruby
+```bash
 gem install ruby_thread_pool
 ```
 
