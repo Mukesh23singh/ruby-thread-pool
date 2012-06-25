@@ -29,6 +29,6 @@ describe "ThreadPool" do
     stop = Time.now
     elapsed = stop - start
     elapsed.must_be :>=, 0.2
-    elapsed.must_be :<=, 0.3
+    elapsed.must_be :<=, 0.35
   end
 end
